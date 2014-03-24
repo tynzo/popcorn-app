@@ -90,7 +90,6 @@ jQuery(function ($) {
     } else {
       App.Router.navigate('filter/' + genre, { trigger: true });
     }
-    App.loader(true, i18n.__('loading'));
     evt.preventDefault();
   });
 
@@ -98,6 +97,7 @@ jQuery(function ($) {
   // Add route callback to router
   App.Router.on('route', function () {
     // Ensure sidebar is hidden
+    App.loader(true, i18n.__('loading'));
     App.sidebar.hide();
   });
 
