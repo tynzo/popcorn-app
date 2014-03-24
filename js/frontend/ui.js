@@ -90,6 +90,7 @@ jQuery(function ($) {
     } else {
       App.Router.navigate('filter/' + genre, { trigger: true });
     }
+    App.loader(true, i18n.__('loading'));
     evt.preventDefault();
   });
 

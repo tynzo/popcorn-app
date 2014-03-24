@@ -20,9 +20,7 @@ App.View.MovieList = Backbone.View.extend({
     },
 
     error: function() {
-        if( window.initialLoading ) {
-            App.loader(false);
-        }
+        App.loader(false);
         // Todo: Translate `Error`
         this.$el.append('<div class="no-results">Error loading data from YTS, try again later</div>');
         return false;
@@ -34,10 +32,7 @@ App.View.MovieList = Backbone.View.extend({
     },
 
     render: function () {
-
-        if( window.initialLoading ) {
-            App.loader(false);
-        }
+        App.loader(false);
 
         if (this.model.length === 0) {
             return this.empty();
